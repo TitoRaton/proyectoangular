@@ -1,0 +1,31 @@
+<div id="cabeceraLogin" class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <h1>Chat de carpintería</h1>
+    </div>
+  </header>
+</div>
+<div id="formularioLogin" class="container">
+  <main class="form-signin w-100 m-auto">
+<form>
+    <div class="form-floating">
+    <input name="userName" [(ngModel)]="formularioRegistro.nombre" type="text" class="form-control" id="floatingInput" placeholder="saturnino34">
+    <label for="floatingInput">Nombre Usuario</label>
+  </div>
+  <div class="form-floating">
+    <input name="userEmail" [(ngModel)]="formularioRegistro.mail" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Email Contacto</label>
+  </div>
+  <div class="form-floating">
+    <input name="password" [(ngModel)]="formularioRegistro.password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Contraseña</label>
+  </div>
+  <div>
+    <button class="btn btn-outline-secondary w-100 py-2" (click)="onRegister()">Registrarse</button>
+    <p>Tienes cuenta? <a routerLink="/login">Loguéate aquí.</a>
+  </div>
+</form>
+<div>{{resultado}}</div>
+</main>
+</div>
+<router-outlet></router-outlet>
